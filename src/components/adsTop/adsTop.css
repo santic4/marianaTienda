@@ -1,0 +1,53 @@
+.adsTop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d4c2b7;
+    height: 8px;
+    padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
+    transition: background-color 0.3s ease; /* Agrega una transición suave */
+    border-radius: 3px;
+    overflow: hidden;
+   
+  }
+
+  .adsTop-sticky{
+    position: sticky;
+    top: 0; /* Pega el componente en la parte superior */
+    z-index: 1001; /* Asegura que esté por encima del NavBar */
+    background-color: #d4c2b7;
+  }
+  
+  .social-media a {
+    color: #5e4c42;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 20px; /* Ajusta el espaciado entre iconos */
+    transition: color 0.3s ease; /* Agrega una transición suave para el color */
+  }
+  
+  .social-media a:hover {
+    color: #ad8a76; /* Cambia el color al hacer hover */
+  }
+  
+  .physical-locations {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #5e4c42;
+  }
+  
+  .physical-locations ul {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+    font-size: 12px;
+    list-style: none; /* Quita las viñetas de la lista */
+  }
+  
+  .physical-locations li {
+    margin-right: 10px; /* Ajusta el espaciado entre elementos de la lista */
+  }
+
+

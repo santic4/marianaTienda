@@ -1,0 +1,75 @@
+/* BlusasCamisas.css */
+
+/* Estilo para el contenedor de las tarjetas */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 300px;
+  }
+  
+  /* Estilo para cada tarjeta de producto */
+  .card {
+    width: 30%; /* Ajusta el ancho según tus necesidades */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilo para el contenido de la tarjeta */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Estilo para el título del producto */
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para la imagen del producto */
+  .card-img {
+    width: 100%;
+    max-height: 250px; /* Ajusta la altura máxima según tus imágenes */
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el precio del producto */
+  .card-price {
+    font-size: 16px;
+    color: #ff5722; /* Color del precio */
+    font-weight: bold;
+  }
+  
+  /* Estilo para la descripción del producto */
+  .card-description {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para los botones de acción (por ejemplo, "Agregar al carrito") */
+  .card-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .card-button:hover {
+    background-color: #e64a19; /* Color de fondo al pasar el ratón */
+  }

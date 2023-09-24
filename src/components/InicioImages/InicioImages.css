@@ -1,0 +1,184 @@
+/* Estilos para el carrusel de imágenes */
+.image-carousel{
+  max-width: 100%;
+  padding-top: 100px;
+  position: relative;
+}
+
+.contenedorMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  max-width:1400px;
+  margin: 80px 0;
+  margin-bottom: 250px;
+}
+
+.inicio-images {
+  margin: 0;
+  padding: 10px;
+  background-color: #cccccc00;
+  border: 1px solid #00000000;
+  max-width: 150px;
+  order: calc(-1 * var(--random-order));
+}
+
+/* Aplicar un orden aleatorio a los elementos secundarios generados dinámicamente */
+.contenedorMain > .inicio-images:nth-child(1) {
+  --random-order: 1;
+  transform: translatey(40px);
+ 
+}
+
+.contenedorMain > .inicio-images:nth-child(2) {
+  --random-order: 2;
+  transform: translatey(-40px);
+}
+
+.contenedorMain > .inicio-images:nth-child(3) {
+  --random-order: 3;
+  transform: translatey(-20px);
+}
+
+.contenedorMain > .inicio-images:nth-child(4) {
+  --random-order: 4;
+  transform: translatey(20px);
+}
+
+.contenedorMain > .inicio-images:nth-child(5) {
+  --random-order: 5;
+  transform: translatey(-50px);
+}
+
+.contenedorMain > .inicio-images:nth-child(6) {
+  --random-order: 6;
+  transform: translatey(-20px);
+}
+
+.contenedorMain > .inicio-images:nth-child(7) {
+  --random-order: 7;
+  transform: translatey(-50px);
+}
+
+.contenedorMain > .inicio-images:nth-child(8) {
+  --random-order: 8;
+  transform: translatey(-30px);
+}
+
+.contenedorMain > .inicio-images:nth-child(9) {
+  --random-order: 9;
+  transform: translatey(-50px);
+ 
+}
+.yo{
+  height: 700px;
+  max-width: 400px;
+ min-width: 400px;
+}
+
+
+.image-carousel{
+  max-width: 400px;
+ min-width: 400px;
+ height: auto;
+ 
+}
+
+/* Estilos adicionales para las imágenes en el escritorio */
+@media screen and (min-width: 1024px) {
+  .inicio-images {
+    gap: 10px; /* Espacio entre las imágenes */
+    margin: 20px 100px; /* Margen horizontal */
+  }
+
+  .image-carousel {
+    max-width: calc(33.33% - 20px); /* Ajusta el ancho de las imágenes */
+  }
+}
+/* Estilos para las imágenes */
+.carousel-item{
+  max-width: 400px;
+  min-width: 400px;;
+  height: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  text-align: center;
+}
+
+.carousel-item img{
+  height: auto;
+  max-width: 400px;
+  min-width: 400px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  border-radius: 2px;
+  z-index: 999;
+}
+
+
+/* Estilos para las imágenes al hacer hover */
+.carousel-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+  
+}
+
+/* Estilos para el título de la imagen al hacer hover */
+.carousel-item:hover {
+  opacity: 1;
+  background-color: #8c705700;
+  font-size: 18px;
+  border-radius: 5px;
+  transform: translateY(-5px); /* Desplaza el título hacia arriba en el hover */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+}
+
+.btnTitle{
+  color: rgb(22, 22, 22);
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+ 
+  justify-content: center;
+  gap: 0;
+}
+
+.image-title {
+  width: 100%;
+text-align: center;
+  justify-content: center;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  position: absolute;
+  top: 250px; /* Ajusta la posición vertical según tus necesidades */
+  left: 10px; /* Ajusta la posición horizontal según tus necesidades */
+  color: rgb(0, 0, 0); /* Cambia el color del texto si es necesario */
+  background: rgba(0, 0, 0, 0); /* Fondo semitransparente para hacer que el texto sea legible */
+  padding: 5px 10px; /* Ajusta el espacio interior según tus necesidades */
+  border-radius: 5px;
+  font-family: Raleway, Sans-serif;
+  font-size: 2rem;
+    font-style: normal;
+    line-height: auto;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+    
+   
+}
+
+
+.image-button {
+  position: absolute;
+  bottom: 350px; /* Ajusta la posición vertical según tus necesidades */
+  left: 165px; /* Ajusta la posición horizontal según tus necesidades */
+  background-color: black; /* Cambia el color de fondo del botón según tus necesidades */
+  color: whitesmoke; /* Cambia el color del texto del botón según tus necesidades */
+  border: none; /* Elimina los bordes del botón si es necesario */
+  padding: 5px 10px; /* Ajusta el espacio interior según tus necesidades */
+  cursor: pointer;
+  z-index: 2000;
+}
