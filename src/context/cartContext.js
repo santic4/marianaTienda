@@ -41,9 +41,8 @@ export const CartProvider = ({ children }) => {
       address: addressValue,
       items: cart.map(item => ({
         id: item.id,
-        nombre: item.nombre,
-        marca: item.marca,
-        precio: item.precio,
+        nombre: item.title,
+        precio: item.price,
         cantidad: item.quantity
       }))
     };

@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import './AdminPanel.css';
 import { collection, addDoc, getFirestore } from 'firebase/firestore';
 
+import { getAuth, signOut } from 'firebase/auth'; // Importar la función de cierre de sesión
+
 const AdminPanel = () => {
   const [productData, setProductData] = useState({
     category: '',
     title: '',
-    imageUrl: '', // Nuevo campo para la URL de la imagen
+    imageUrl: '',
     price: '',
     description: '',
   });
@@ -20,8 +22,6 @@ const AdminPanel = () => {
     });
   };
 
-
-
   // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +29,6 @@ const AdminPanel = () => {
     const { category, title, imageUrl, price, description } = productData;
 
     if (category && title && imageUrl && price && description) {
-     
       try {
         const productsCollectionRef = collection(db, 'products');
         await addDoc(productsCollectionRef, {
@@ -51,9 +50,18 @@ const AdminPanel = () => {
     }
   };
 
+  const handleSignOut = () => {
+    const auth = getAuth();
+    signOut(auth)
+     
+  };
+
   return (
+   
+    
     <div className='AdminPanel'>
       <h2>Panel de Administración</h2>
+      <button onClick={handleSignOut}>Cerrar Sesión</button>
       <form onSubmit={handleSubmit}>
         <label>
           Categoría:
@@ -74,7 +82,7 @@ const AdminPanel = () => {
           />
         </label>
         <label>
-          URL de la imagen: {/* Nuevo campo de URL de imagen */}
+          URL de la imagen:
           <input
             type='text'
             name='imageUrl'
@@ -102,6 +110,7 @@ const AdminPanel = () => {
         <button type='submit'>Agregar Producto</button>
       </form>
     </div>
+   
   );
 };
 

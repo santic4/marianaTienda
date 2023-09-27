@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './BlusasCamisas.css';
+import './Outlet.css';
 import { Link } from 'react-router-dom';
 
-const BlusasCamisas = ({ products }) => {
+const Outlet = ({ products }) => {
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const BlusasCamisas = ({ products }) => {
   );
 };
 
-export default BlusasCamisas;
+export default Outlet;

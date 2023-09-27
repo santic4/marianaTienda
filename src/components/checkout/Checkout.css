@@ -1,0 +1,199 @@
+
+
+
+  .sectionCheck{
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+  gap: 20%;
+  min-height: 80vh;
+  margin: 0 auto 50px auto;
+  margin-top: 200px;
+  }
+
+  
+  .sectionCheck   .carritoCheckout {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.087);
+        box-shadow: -0px 2px 4px 2px rgba(0, 0, 0, 0.172);
+        margin-top: 100px;
+        width: 30%;
+        height: 700px;
+        margin-left: 10%;
+        position: relative;
+        overflow:scroll;
+        overflow-x: hidden;
+      }
+
+      .sectionCheck    .carritoCheckout h3 {
+        text-align: center;
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0;
+        padding: 10px;
+        width: 100%; 
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        color: #225;
+        position: sticky;
+      }
+      .sectionCheck   .CartItem {
+        background-color: rgba(255, 247, 9, 0.803);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      
+      .sectionCheck   .CartItem h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #484848;
+        padding: 5px;
+        
+      }
+      
+      .sectionCheck   .CartItem p {
+        margin: 6px 0;
+        font-size: 14px;
+        color: #484848;
+      }
+      
+      .sectionCheck   .CartItem p:first-child {
+        margin-top: 0;
+      }
+      
+      .sectionCheck  .CartItem p:last-child {
+        margin-bottom: 0;
+      }
+      
+  
+  
+      .sectionCheck .container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.087);
+    box-shadow: -0px 2px 4px 2px rgba(0, 0, 0, 0.172);
+    width: 30%;
+    font-family: Arial, sans-serif;
+    margin-right: 10%;
+  }
+  
+  .sectionCheck h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  
+  .sectionCheck form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sectionCheck label {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .sectionCheck input,
+                 textarea {
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+   input[type="text"],
+                input[type="email"] {
+    width: 100%;
+  }
+  
+ textarea {
+    width: 100%;
+    resize: vertical;
+  }
+  
+ button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .sectionCheck .carritoCheckout {
+    scrollbar-width: thin;
+    scrollbar-color: #888888 #f5f5f5;
+  
+  }
+  
+
+  .sectionCheck .carritoCheckout::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  
+  .sectionCheck .carritoCheckout::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 4px;
+  }
+  
+  
+  .sectionCheck .carritoCheckout::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+  }
+
+  .comprobante-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px; 
+    width: 300px;
+  }
+  
+  .comprobante-title {
+    margin-bottom: 10px;
+  }
+  
+  .comprobante-info {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px; 
+    width: 300px; 
+    margin-top: 20px;
+  }
+  
+  .comprobante-info p {
+    margin: 5px 0;
+  }
+  

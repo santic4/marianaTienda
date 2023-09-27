@@ -15,7 +15,7 @@ const InicioImages = () => {
     { title: 'Sweters', images: images.sweters },
     { title: 'Buzos', images: images.buzos },
     { title: 'Outlet', images: images.outlet },
-    // Agrega otras categorías aquí si es necesario
+
   ];
 
   function renderImageCarousel(images, categoryIndex) {

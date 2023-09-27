@@ -18,7 +18,7 @@ function Navbar() {
       <div className="menu-icon" onClick={toggleMenu}>
         <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
       </div>
-
+      
       <div className="logo">
         <Link to="/">
           <img src="../img/logoPrincipal.jpeg" alt="Logo" />

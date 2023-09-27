@@ -1,15 +1,13 @@
 import React, { useContext, useState } from "react";
-
-import { CartContext } from '.././context/cartContext';
+import './Checkout.css'
+import { CartContext } from '../../context/cartContext';
 
 function Checkout() {
   const { cart, total, addBuyer } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
   const [buyerInfo, setBuyerInfo] = useState(null);
   const [orderDate, setOrderDate] = useState(null);
-
-  
-
+  console.log(cart)
 
   const handlePaymentClick = () => {
     const emailInput = document.getElementById('emailInput');
@@ -23,6 +21,7 @@ function Checkout() {
 
     setOrderDate(new Date());
     addBuyer(emailValue, nameValue, addressValue, cart, setOrderId, setBuyerInfo, nameCollection);
+
    
   };
 
@@ -74,9 +73,8 @@ function Checkout() {
             <h1>Detalle de Compra</h1>
             {cart.map(p =>
               <div key={p.id} className="CartItem">
-                <h3>{p.nombre}</h3>
-                <p>Marca: {p.marca}</p>
-                <p>Precio (u.) : ${p.precio}</p>
+                <h3>{p.title}</h3>
+                <p>Precio (u.) : ${p.price}</p>
                 <p>Cantidad: {p.quantity}</p> 
               </div>
             )}
@@ -96,11 +94,6 @@ function Checkout() {
               <label htmlFor="address">Dirección:</label>
               <textarea id="addressInput" name="address" rows="1" required></textarea>
 
-              <label htmlFor="card">Número de Tarjeta:</label>
-              <input type="text" id="card" name="card" required />
-
-              <label htmlFor="expiry">Fecha de Vencimiento:</label>
-              <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required />
 
               <label htmlFor="message">Mensaje adicional:</label>
               <textarea id="message" name="message" rows="4" required></textarea>
