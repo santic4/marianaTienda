@@ -1,75 +1,150 @@
-/* BlusasCamisas.css */
-
-/* Estilo para el contenedor de las tarjetas */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 300px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 50px;
+ 
+}
+
+.h1Category {
+  width: 100%;
+ 
+}
+
+.h1Category h1{
+  font-weight: 400;
+  width: 100%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+color: #ad8a76;
+border-bottom: 1px solid #ad8a76;
+}
+
+.card {
+  height: 390px;
+  background-color: transparent; 
+  color: #ad8a76; 
+  overflow: hidden;
+  width: 182px;
+  padding: 30px 10px;
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.card-body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card:hover .card-body {
+  box-shadow: none; 
+}
+
+.descriptionCard {
+  margin-top: -40px;
   
-  /* Estilo para cada tarjeta de producto */
-  .card {
-    width: 30%; /* Ajusta el ancho según tus necesidades */
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
+}
+
+.descriptionCard h3{
+  font-weight: 700;
   
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Estilo para el contenido de la tarjeta */
-  .card-body {
-    padding: 20px;
-  }
-  
-  /* Estilo para el título del producto */
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo para la imagen del producto */
-  .card-img {
-    width: 100%;
-    max-height: 250px; /* Ajusta la altura máxima según tus imágenes */
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  /* Estilo para el precio del producto */
-  .card-price {
-    font-size: 16px;
-    color: #ff5722; /* Color del precio */
-    font-weight: bold;
-  }
-  
-  /* Estilo para la descripción del producto */
-  .card-description {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  /* Estilo para los botones de acción (por ejemplo, "Agregar al carrito") */
-  .card-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #ff5722; /* Color del botón */
-    color: #fff; /* Color del texto del botón */
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .card-button:hover {
-    background-color: #e64a19; /* Color de fondo al pasar el ratón */
-  }
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #6b5253;
+  font-weight: 300;
+}
+
+.card-img {
+  width: 182px;
+  min-height: 325px;
+  max-height: 325px;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ff6f61;
+}
+
+.iconsCartDetail {
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 3px 3px;
+  z-index: 1000;
+  border-radius: 11px;
+  transform: translateY(-50px);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.iconsCartDetail:hover {
+  background-color: white;
+  padding: 3px;
+  color: #6b5253;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btnCart {
+  background-color: transparent;
+  color: #6b5253;
+  border: 2px solid #6b5253;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; 
+  text-decoration: none;
+}
+
+.btnCart:hover {
+  background-color: #6b5253;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Estilos para el contenedor del filtro */
+.sectionFiltrar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 400px; 
+  width: 100%; 
+}
+
+/* Estilos para la etiqueta "Filtro" */
+.sectionFiltrar::before {
+  content: 'Filtro:';
+  margin-right: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.665);
+}
+
+/* Estilos para el campo de entrada de texto */
+.sectionFiltrar input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Estilos para el placeholder del campo de entrada de texto */
+.sectionFiltrar input[type="text"]::placeholder {
+  color: #999;
+}
+
+/* Estilos para el campo de entrada de texto cuando está enfocado */
+.sectionFiltrar input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

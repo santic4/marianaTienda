@@ -1,0 +1,104 @@
+
+ footer{
+    background-color: transparent; /* Color de fondo principal */
+    padding: 20px 0;
+    text-align: center;
+    color: #ad8a76;
+  }
+  
+ .footer .carousel-root {
+    width: 80%; /* Ancho del carrusel (ajusta según tus necesidades) */
+    margin: 0 auto;
+    background-color: transparent;
+    color: #ad8a76;
+   
+  }
+  
+  .footer .carousel-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    justify-content: space-around;
+    color: #ad8a76; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente del texto */
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .footer .icon {
+    font-size: 80px; /* Tamaño de fuente del ícono */
+    margin-bottom: 10px;
+    color: #d79b84;
+    min-width: 300px;
+  }
+  
+  /* Cambiar el estilo de los puntos indicadores si es necesario */
+  .footer .carousel .carousel-dots .dot {
+    background: #ad8a76; /* Color de los puntos */
+    color: #ad8a76;
+    opacity: 1; /* Opacidad de los puntos no activos */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.781);
+    width: 100%; /* Tamaño de los puntos */
+    height: 12px;
+    margin: 0 5px; /* Espacio entre los puntos */
+    cursor: pointer;
+    background-color: #ad8a76;
+  }
+  
+  /* Estilo del punto activo */
+  .footer .carousel .carousel-dots .dot.selected {
+    background: #000000; /* Color del punto activo */
+    opacity: 1; /* Opacidad del punto activo */
+    width: 100%; /* Tamaño del punto activo */
+    height: 16px;
+    background-color:#6b5253;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.691);
+    color: #6b5253;
+  }
+
+  .control-dots{
+    color: #6b5253;
+    -webkit-text-stroke: 2px #6b5253;
+  }
+
+  .p1{
+   font-size: 24px;
+  }
+
+  .p2{
+    font-size: 16px;
+  }
+
+  /*FOOTER PIE*/
+
+  .ContenedorLocales{
+    margin: 80px auto 50px auto;
+    color: #777;
+  }
+
+  .container-pie{
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    background-color: #d79b84;
+    width: 100%;
+    color: white;
+  }
+
+  .container-pie iframe{
+    border-radius: 10px;
+    opacity: 0.8;
+  }
+
+  .infContainer h3{
+    color: #777;
+    margin-bottom: 50px;
+  }
+
+  .adsBtn{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #d79b84;
+    color: #d79b84;
+  }

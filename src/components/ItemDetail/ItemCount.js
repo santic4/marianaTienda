@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 
-const ItemCount = ({ stock, onAdd, initial, cart }) => {
+const ItemCount = ({  onAdd, initial, cart }) => {
   const [count, setCount] = useState(initial);
 
   const sumar = () => {
-    if (count < stock) {
+    if (count < 1) {
       setCount(count + 1);
     }
   };

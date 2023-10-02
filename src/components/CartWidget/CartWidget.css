@@ -1,0 +1,28 @@
+.iconsCart{
+color: #6b5253;
+cursor: pointer;
+   font-size: 25px;
+   padding: 8px 8px;
+   margin-right: -5px;
+   z-index: 1000;
+   border-radius: 11px;
+   text-decoration: none;
+   transition: background-color 0.3s ease;
+}
+
+.iconsCart:hover{
+    background-color: #ffa07a;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.notification:hover{
+    color: #ffa07a;
+    text-decoration: none;
+}
+.notification{
+    list-style: none;
+    text-decoration: none;
+    color: #6b5253;
+}

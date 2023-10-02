@@ -3,22 +3,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d4c2b7;
-    height: 8px;
-    padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
+    background-color: white;
+    height: 5px;
     transition: background-color 0.3s ease; /* Agrega una transición suave */
     border-radius: 3px;
     overflow: hidden;
-   
+    border-bottom: 1px solid #6b5253;
   }
 
   .adsTop-sticky{
-    position: sticky;
-    top: 0; /* Pega el componente en la parte superior */
-    z-index: 1001; /* Asegura que esté por encima del NavBar */
-    background-color: #d4c2b7;
+   
+    top: 0;
+    transition: top 0.3s ease; /* Añade una transición suave a la propiedad 'top' */
+    padding: 8px; /* Añade espacio alrededor del elemento para mayor visibilidad */
+    z-index: 100; /* Ajusta el valor según tus necesidades */
   }
   
+
   .social-media a {
     color: #5e4c42;
     text-decoration: none;
@@ -35,7 +36,8 @@
     display: flex;
     align-items: center;
     font-size: 12px;
-    color: #5e4c42;
+    color: #777;
+    
   }
   
   .physical-locations ul {

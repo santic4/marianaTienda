@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import './Outlet.css';
 import { Link } from 'react-router-dom';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const Outlet = ({ products }) => {
   const [lista, setLista] = useState([]);
-
+  const db = getFirestore();
+  
   useEffect(() => {
-    // Verifica si products tiene datos antes de establecer la lista
-    if (products.length > 0) {
-      // En lugar de obtener los productos aquí, accede a la lista desde las props
-      setLista(products);
-    }
-  }, [products]);
+    const getLista = async () => {
+      try {
+        const q = query(collection(db, 'products'), where('category', '==', 'Outlet'));
+        const querySnapshot = await getDocs(q);
+        const docs = [];
+        querySnapshot.forEach((doc) => {
+          docs.push({ ...doc.data(), id: doc.id });
+        });
+        setLista(docs);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getLista();
+  }, []);
 
   return (
     <div className='container'>

@@ -1,12 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap');
+
+
+
 .app {
   text-align: center;
   border-radius: 5px;
-  font-family: Raleway, Sans-serif;
+  margin: 10px 50px 0px 50px;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
 body{
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -29,10 +40,14 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  list-style: none;
+  text-decoration: none;
 }
 
 .App-link {
   color: #61dafb;
+  list-style: none;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

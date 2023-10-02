@@ -35,6 +35,9 @@ const SacosCamperas = () => {
             <p className='card-description'>Descripción: {list.description}</p>
             <img className='card-img' src={list.imageUrl} alt={list.title} />
             <p className='card-price'>Precio: {list.price}</p>
+            <p className='card-price'>Precio: {list.peso}</p>
+            <p className='card-price'>Precio: {list.color}</p>
+            <p className='card-price'>Precio: {list.talle}</p>
           </div>
         </div>
       ))}

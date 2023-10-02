@@ -1,86 +1,148 @@
 .sectionDetail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: transparent; /* Mantener el fondo transparente */
+  color: #ad8a76; /* Cambiar el color del texto */
   padding: 20px;
-  background-color: #f9f9f9;
-  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.tituloCarrito {
-  text-align: center;
+.tituloCarrito h3 {
+  font-size: 30px;
+  font-weight: 700;
   margin-bottom: 20px;
+  border-bottom: 1px solid #ad8a76;
+  border-top: 1px solid #ad8a76;
+}
+
+.contenedorBtnBack{
+ margin-top: 60px;
+ width: 100%;
+ justify-content: start;
 }
 
 .ItemDetail {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 105vh;
+  gap: 50px;
 }
 
 .ItemDetail img {
-  max-width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  min-width: 500px;
+  height: auto;
+  border-radius: 5px;
+  z-index: 999;
 }
 
-.ItemDetail h2 {
-  margin: 10px 0;
-  font-size: 28px;
-  color: #ff6600;
-}
-
-.ItemDetail h6 {
-  margin: 0;
-  font-size: 18px;
-  color: #666;
-}
-
-.ItemDetail p {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #555;
-}
-
-.contador {
-  text-align: center;
-}
-
-.finish,
-.finish:hover {
-  padding: 12px 24px;
-  background-color: #ff6600;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.finish:hover {
-  background-color: #cc5500;
-}
-
-.btns{
+.DetailHijo {
   display: flex;
-  flex-direction: row;
-  padding: 30px;
-  gap: 20px;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.DetailHijo h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
   
 }
 
-.btnSeguir{
-  background-color: #0daa34;
+.DetailHijo h2:first-child {
+  margin-top: 0;
 }
 
-.btnSeguir:hover {
-  background-color: #00c400;
+.DetailHijo p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translatey(60px);
+}
+
+/* Estilos para los botones del contador */
+.btnAddToCart,
+.finish {
+  background-color: #ad8a76;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  margin-top: 10px;
+ margin: auto 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btns{
+  transform: translatey(50px);
+}
+
+.btnAddToCart:hover,
+.finish:hover {
+  background-color: #6b5253; /* Cambiar el color de fondo en hover */
+  color: white; /* Cambiar el color del texto en hover */
+}
+
+.item-count-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: #f5f5f5; /* Color de fondo suave */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+  /* Espaciado interno */
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 16px; /* Espacio entre botones */
+  align-items: center;
+
+}
+
+.custom-button {
+  padding: 10px 20px;
+  background-color: #ad8a76; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  /* Efecto de sombra al pasar el ratón */
+  &:hover {
+    background-color: #8b705c;
+  }
+}
+
+.minus-button,
+.plus-button {
+  font-size: 24px;
+}
+
+.buy-button {
+  margin-top: 16px; /* Espacio superior para separar del resto de los botones */
+}
+
+/* Estilo para el botón cuando está deshabilitado */
+.buy-button[disabled] {
+  background-color: #ccc; /* Color de fondo deshabilitado */
+  cursor: not-allowed;
 }

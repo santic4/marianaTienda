@@ -1,42 +1,36 @@
 
 export const images = {
-    blusasCamisas: [
+    BlusasCamisas: [
       '../img/CamisasMain.jpg',
       '../img/BlusasMain1.jpg',
       '../img/CamisasMain1.jpg',
     ],
-    pantalones: [
+    Pantalones: [
       '../img/PantalonesMain.jpg',
       '../img/PantalonesMain1.jpg',
     ],
-    remeras: [
+    Remeras: [
       '../img/RemerasMain.jpg',
       '../img/RemerasMain2.jpg',
     ],
-    sacosCamperas: [
+    SacosCamperas: [
       '../img/SacosMain.jpg',
-      
+      '../img/SacosMain2.jpg',
     ],
-    shortPolleras: [
+    ShortPolleras: [
       '../img/ShortMain.jpg',
       '../img/ShortMain1.jpg',
+      '../img/Polleras1.jpg',
     ],
-    noche: [
-      '../img/NocheMain1.jpg',
-      
-    ],
-    sweters: [
+    Sweters: [
       '../img/PantalonesMain.jpg',
       '../img/PantalonesMain1.jpg',
     ],
-    buzos: [
+    Buzos: [
       '../img/BuzosMain1.jpg',
      
     ],
-    outlet: [
-      '../img/PantalonesMain.jpg',
-      '../img/PantalonesMain1.jpg',
-    ],
+   
   };
   
   export default images;

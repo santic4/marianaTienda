@@ -4,8 +4,8 @@ import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-
-
+import AdsTop from '../adsTop/adsTop';
+import '../adsTop/adsTop.css'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,9 +14,12 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar sticky ${menuOpen ? 'open' : ''}`}>
+    <div className='sticky'>
+    <AdsTop />
+    
+    <nav className={`navbar ${menuOpen ? 'open sticky' : ''}`}>
       <div className="menu-icon" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+        <FontAwesomeIcon icon={!menuOpen && faBars} />
       </div>
       
       <div className="logo">
@@ -37,7 +40,7 @@ function Navbar() {
         )}
         <li><Link to="/">Inicio</Link></li>
         <li>
-          <Link to="/">Productos</Link>
+          <Link to="/">Categorias</Link>
           <ul className="sub-menu">
           <li><Link to="/BlusasCamisas">Blusas y Camisas</Link></li>
             <li><Link to="/Sweaters">Sweaters</Link></li>
@@ -50,12 +53,13 @@ function Navbar() {
             
           </ul>
         </li>
-        <li><Link to="/Quienes Somos">Quiénes Somos</Link></li>
-        <div>
+        <li><Link to="/QuienesSomos">Quiénes Somos</Link></li>
+        <div className='Admin'>
       <Link to="/admin">Panel de Administrador</Link>
       </div>
       </ul>
     </nav>
+    </div>
   );
 }
 

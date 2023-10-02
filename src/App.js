@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+
+//FIREBASE
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { collection,  getFirestore, query, onSnapshot } from 'firebase/firestore'; 
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import appFirebase from './firebase/firebase';
 
-
+//COMPONETES
 import Navbar from './components/NavBar/NavBar';
-import AdsTop from './components/adsTop/adsTop';
 import InicioImages from './components/InicioImages/InicioImages';
 import AdminPanel from './components/AdminPanel/AdminPanel';
 import BlusasCamisas from './components/BlusasCamisas/BlusasCamisas';
@@ -19,12 +22,12 @@ import Buzos from './components/Buzos/Buzos'
 import Cart from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
 import Login from './components/Login/Login';
-
 import { CartProvider } from './context/cartContext';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import appFirebase from './firebase/firebase';
 import ItemDetailContainer  from './components/ItemDetailContainer/ItemDetailContainer';
+import Footer from './components/Footer/Footer';
+import QuienesSomos from './components/QuienesSomos/QuienesSomos';
 
+//FONTS
 const auth = getAuth(appFirebase)
 
 function App() {
@@ -66,31 +69,37 @@ function App() {
     <div className='app'>
       <BrowserRouter>
       <CartProvider>
-        <AdsTop />
+      
         <Navbar />
         
-        <Routes>
-  <Route path="/" element={<InicioImages />} />
-  <Route path="/BlusasCamisas" element={<BlusasCamisas products={products} />} />
-  <Route path="/Sweaters" element={<Sweaters products={products} />} />
-  <Route path="/Remeras" element={<Remeras products={products} />} />
-  <Route path="/Pantalones" element={<Pantalones products={products} />} />
-  <Route path="/SacosCamperas" element={<SacosCamperas products={products} />} />
-  <Route path="/Noche" element={<Noche products={products} />} />
-  <Route path="/Buzos" element={<Buzos products={products} />} />
-  <Route path="/Outlet" element={<Outlet products={products} />} />
-  <Route path="/item/:id" element={<ItemDetailContainer />} />
-  <Route path="/cart" element={<Cart />} />
-  <Route path="/checkout" element={<Checkout />} />
-  <Route
-    path="/admin"
-    element={usuario ? <AdminPanel correoUsuario={usuario.email} /> : <Login />}
-  />
-</Routes>
+         <Routes>
+          <Route path="/" element={<InicioImages />} />
+          <Route path="/BlusasCamisas" element={<BlusasCamisas products={products} />} />
+          <Route path="/Sweaters" element={<Sweaters products={products} />} />
+          <Route path="/Remeras" element={<Remeras products={products} />} />
+          <Route path="/Pantalones" element={<Pantalones products={products} />} />
+          <Route path="/SacosCamperas" element={<SacosCamperas products={products} />} />
+          <Route path="/Noche" element={<Noche products={products} />} />
+          <Route path="/Buzos" element={<Buzos products={products} />} />
+          <Route path="/Outlet" element={<Outlet products={products} />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/QuienesSomos" element={<QuienesSomos />}/>
+          <Route
+           path="/admin"
+           element={usuario ? <AdminPanel correoUsuario={usuario.email} /> : <Login />}
+           />
+         </Routes>
+
+         <Footer />
+
         </CartProvider>
       </BrowserRouter>
     </div>
+    
   );
+  
 }
 
 export default App;

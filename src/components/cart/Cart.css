@@ -3,6 +3,7 @@
     min-height: 60vh;
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
     align-items: center;
     padding: 0 0 50px 0;
     border: 1px solid #ccc;
@@ -11,13 +12,42 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 50px;
     height: 100%;
-    margin-top: 200px;
+   
   }
+
+  .tituloCarrito{
+    height: 40px;
+    width: 100%;
+
+  }
+
+  .btnBack {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+    padding: 6px 8px; /* Espaciado interno */
+    background-color: transparent; /* Color de fondo */
+    color: #777; /* Color del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    border-color: #ad8a76;
+    border: 1px solid;
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; 
+  }
+    /* Efecto de sombra al pasar el ratón */
+    .btnBack:hover {
+      background-color: #d79b84;
+      color: white;
+    }
   
+
   .carrito  .CartPage {
-    padding: 0 20px;
+    padding: 30px 20px;
     text-align: center;
-    width: 50%;
+    width: 80%;
+    min-height: 400px;
   }
   
   .carrito .CartItem {
@@ -35,7 +65,7 @@
   .carrito .CartItem h3 {
     margin: 0;
     font-size: 18px;
-    color: #333;
+    color: #ad8a76;
     align-self: center;
     width: 100px;
   }
@@ -59,7 +89,7 @@
   .carrito .buttonClear {
     margin-top: 10px;
     padding: 8px 16px;
-    background-color: #f44336;
+    background-color: #c0a489;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -73,9 +103,16 @@
   
   .carrito .checkout {
     margin-top: 10px;
+    padding: 0 0px;
     text-decoration: none;
     color: white;
     transition: color 0.3s ease;
+   
+  }
+
+  .arrowBar{
+   margin-bottom: -4px;
+   padding-left: 4px;
   }
   
   .carrito .checkout:hover {
@@ -98,18 +135,22 @@
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #ffa07a;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  .precio button:hover{
+    background-color: #d79b84;
+  }
   
   
   .precio h3 {
     font-size: 24px;
-    color: #333;
+    color: #ad8a76;
     margin: 10px 30px 10px 30px;
   }
   

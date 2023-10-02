@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Login.css'
+
 //imports Firebase
 import appFirebase from '../../firebase/firebase'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
@@ -27,7 +28,7 @@ const Login = () => {
     return(
        <div className="contenedorPadre">
         
-            <h1>'Inicia sesion</h1>
+            <h1>Inicia sesion</h1>
          
             <form className="padreForm" onSubmit={handlerSubmit}>
                 <div className="hijo1">

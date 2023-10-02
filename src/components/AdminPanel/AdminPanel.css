@@ -1,6 +1,79 @@
-.AdminPanel{
-    margin: 200px;
+/* Estilos para el contenedor principal */
+.contendorPanel{
+    width: 100%;
+   
 }
 
+.AdminPanel{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+  
+  /* Estilos para el título "Panel de Administración" */
+  h1 {
+    font-size: 60px;
+    height: auto;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el botón "Cerrar Sesión" */
+  .contendorPanel .btn {
+    background-color: #ff5733;
+    height: 30px;
+    color: #fff;
+    padding: 3px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    transform: translatex(600px);
+  }
+  
+  .contendorPanel button:hover {
+    background-color: #d83600;
+  }
+  
+  /* Estilos para los elementos del formulario */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para el botón "Agregar Producto" */
+  .contendorPanel button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
 
 
