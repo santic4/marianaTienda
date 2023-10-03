@@ -39,7 +39,7 @@ function Navbar() {
           </div>
         )}
         <li><Link to="/">Inicio</Link></li>
-        <li>
+        <li className="categorias-item">
           <Link to="/">Categorias</Link>
           <ul className="sub-menu">
           <li><Link to="/BlusasCamisas">Blusas y Camisas</Link></li>
@@ -63,4 +63,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar;  

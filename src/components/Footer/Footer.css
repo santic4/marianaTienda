@@ -102,3 +102,9 @@
     border-top: 1px solid #d79b84;
     color: #d79b84;
   }
+
+  @media screen and (max-width: 1024px) {
+    .container-pie{
+      display: none;
+    }
+  }

@@ -101,6 +101,7 @@ function Checkout() {
             <p>{id}</p>
 
           </div>
+          
         )}
       </div>
       
@@ -109,6 +110,7 @@ function Checkout() {
 
   
   return (
+    <div>
     <section className="sectionCheck">
       {orderId ? (
         <div>
@@ -118,6 +120,7 @@ function Checkout() {
         <>
           <div className="carritoCheckout">
             <h1>Detalle de la compra</h1>
+            <p className="pPago">*Metodo de pago: Transferencia directa</p>
             {cart.map(p =>
               <div key={p.id} className="CartItem">
                 <h3>{p.title}</h3>
@@ -126,7 +129,7 @@ function Checkout() {
                 <p>Talle: {p.talle}</p> 
               </div>
             )}
-            <p>10,5% IVA.</p>
+            <p className="pPago">*10,5% IVA.</p>
             <h3>Total: ${totalIva}</h3>
           </div>
 
@@ -169,7 +172,11 @@ function Checkout() {
           </div>
         </>
       )}
+
     </section>
+   
+    <p>Una vez completado los datos de envio se le mostrara</p>
+    </div>
   );
 }
 

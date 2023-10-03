@@ -10,8 +10,14 @@
   font-family: 'Open Sans', sans-serif;
   list-style: none;
   text-decoration: none;
+ 
 }
 
+@media screen and (max-width: 1024px) {
+  .app {
+  margin: 5px;
+  }
+}
 body{
   margin: 0;
   padding: 0;

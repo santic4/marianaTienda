@@ -1,14 +1,12 @@
 .navbar {
- 
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: rgb(0, 0, 0);
-  padding: 0px 100px;
   position: relative; /* Agrega posición relativa */
   transition: background-color 0.3s ease; /* Transición de color de fondo */
   background-color: white; /* Fondo transparente inicial */
-  margin: auto 0px 0px 0px;
 
 }
 
@@ -40,9 +38,6 @@
 .logo img {
   max-height: 110px; /* Ajusta el tamaño del logo según tus necesidades */
 }
-
-
-
 
 /* Estilos para el ícono del menú (hamburguesa) */
 .menu-toggle {
@@ -76,12 +71,10 @@
 /* Estilos para mostrar la lista de enlaces cuando se abre el menú */
 .nav-links.show {
   display: block;
-  transform: translateX(0px);
   background-color: #ffa07a;
   width: 220px;
   height: 100%; /* Resta el espacio del ícono de cierre */
   position: fixed;
-  top: 40px; /* Deja espacio para el ícono de cierre */
   left: 0;
   padding-top: 0; /* Elimina el espacio superior */
   padding-left: 20px;
@@ -95,7 +88,7 @@
 
 .close-menu-icon{
   cursor: pointer;
-  font-size: 20px;
+  font-size: 2vh;
   color: #8c7057;
   margin-left: 180px;
   margin-top: 10px;
@@ -108,16 +101,16 @@
 
 
 .nav-links.show li {
-  margin: 20px 10px 0 5px;
+  margin: 10px 10px 0 5px;
   padding: 10px 0;
   list-style: none;
   font-weight: 300;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 2vh;
+  max-height: 100%;
 }
-
 .nav-links.show ul{
-  margin-top: 20px;
+  font-size: 2vh;
 padding: 0px 10px;
 list-style: none;
   text-decoration: none;
@@ -125,9 +118,10 @@ list-style: none;
 }
 
 .nav-links.show a {
+  font-size: 2vh;
   text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: auto;
   font-weight: 500;
   list-style: none;
   text-decoration: none;
@@ -135,23 +129,29 @@ list-style: none;
 
 /* Estilos para el menú desplegable */
 .sub-menu {
+  font-size: 2vh;
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: calc(100vh - 20px); /* Resta el espacio superior e inferior */
+  overflow-y: auto; /* Agrega desplazamiento vertical si es necesario */
 }
 
 .sub-menu li {
+  font-size: 2vh;
   margin: 5px 0;
   list-style: none;
   text-decoration: none;
+  font-size: auto;
+  max-height: 100%;
 }
 
 .sub-menu a {
-  font-size: 16px;
+  font-size: auto;
   list-style: none;
   text-decoration: none;
 }
 
 .Admin{
-  margin-top: 100px;
+ margin-top: 50px;
 }

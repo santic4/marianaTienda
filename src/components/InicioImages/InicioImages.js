@@ -62,7 +62,7 @@ const InicioImages = () => {
   return (
     <div className='containerAbuelo'>
        <div className='titulo-container'>
-          <h1>¡Bienvenida a Mariana Moda!</h1>
+          <h1>¡Bienvenida a Mariana Ropa!</h1>
         </div>
       <div className='contenedorMain'>
        

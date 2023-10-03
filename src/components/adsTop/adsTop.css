@@ -19,7 +19,6 @@
     z-index: 100; /* Ajusta el valor según tus necesidades */
   }
   
-
   .social-media a {
     color: #5e4c42;
     text-decoration: none;
@@ -53,3 +52,30 @@
   }
 
 
+  @media screen and (max-width: 1024px) {
+    .adsTop {
+      background-color: white;
+      height: auto;
+      transition: background-color 0.3s ease; /* Agrega una transición suave */
+      border-radius: 3px;
+      overflow: hidden;
+      border-bottom: 1px solid #6b5253;
+    }
+
+    .physical-locations {
+      font-size: 1vh;
+    }
+
+    .physical-locations ul {
+      display: flex;
+      gap: 0px;
+      padding-right: 0px;
+      font-size: 1vh;
+   
+    }
+
+    .social-media a {
+      font-size: 1vh;
+      margin-right: 20px; /* Ajusta el espaciado entre iconos */ 
+    }
+  }
