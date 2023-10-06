@@ -1,74 +1,130 @@
 /* Estilos para el contenedor principal */
 .contendorPanel{
     width: 100%;
-   
+    height: auto;
+justify-content: center;
+margin-bottom: 80px;
 }
 
 .AdminPanel{
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 80px;
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
   }
   
-  /* Estilos para el título "Panel de Administración" */
-  h1 {
-    font-size: 60px;
-    height: auto;
-    font-weight: 700;
-    margin-bottom: 20px;
+  .contenedor-hijo1 {
+    max-width: 400px;
+    margin: auto auto auto 0px;
+    padding: 20px 40px 20px 20px;
+    background-color: #f7f7f700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .agregarImg{
+    padding-bottom: 50px;
+    color: #ad8a76;
+  }
+
+  .agregarImg strong{
+    color: #b58f83;
+  }
+
+  .contenedor-hijo2{
+    max-width: 400px;
+    padding: 20px 40px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .contenedor-hijo2 h2{
+    text-align: start;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(38, 38, 38, 0.814);
   }
   
-  /* Estilos para el botón "Cerrar Sesión" */
-  .contendorPanel .btn {
-    background-color: #ff5733;
-    height: 30px;
-    color: #fff;
-    padding: 3px 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-    transform: translatex(600px);
+
+.contenedor-hijo1 h2{
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(38, 38, 38, 0.814);
   }
   
-  .contendorPanel button:hover {
-    background-color: #d83600;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  /* Estilos para los elementos del formulario */
   label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
     font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
   }
   
-  input[type="text"],
+  input[type='text'],
   textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .btnAdd {
+    text-align: center;
+  }
+  
+  button[type='submit'] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #0056b3;
   }
   
   /* Estilos para el botón "Agregar Producto" */
+
+  .btnAdd{
+   text-align: center;
+  }
   .contendorPanel button[type="submit"] {
-    background-color: #007bff;
+    margin: auto;
+    background-color: #36669a;
     color: #fff;
-    padding: 5px 10px;
+    padding: 5px 8px;
     border: none;
     border-radius: 5px;
     font-size: 13px;
     cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn{
+    margin: auto;
+    background-color: #9a3636d2;
+    color: #fff;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover{
+    background-color: #9f2d2d;
     transition: background-color 0.3s;
   }
   
@@ -76,4 +132,49 @@
     background-color: #0056b3;
   }
 
+  .contenedor-hijo1{
+    text-align: justify;
 
+  }
+
+  .ulDelete li{
+    text-align: start;
+    margin: 5px auto;
+    height: 60px;
+    text-align: start;
+    justify-content: start;
+  }
+
+  .ulDelete{
+    overflow: scroll;
+    flex-wrap: nowrap;
+    height: 600px;
+  
+  }
+
+  .iconTresh{
+    margin-right: 0;
+  cursor:pointer;
+   text-align: end;
+   right: 0;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .AdminPanel{
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      margin: auto;
+    }
+
+    .contenedor-hijo1 {
+      width: 50%;
+      height: auto;
+      margin: auto auto auto auto;
+    }
+  
+    .contenedor-hijo2 {
+      margin: auto auto auto auto;
+    }
+  }

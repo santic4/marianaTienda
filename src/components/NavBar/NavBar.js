@@ -6,30 +6,42 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import AdsTop from '../adsTop/adsTop';
 import '../adsTop/adsTop.css'
+
+
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+     
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+   
   };
 
+ 
+
   return (
-    <div className='sticky'>
+    <div >
+      <div>
     <AdsTop />
-    
-    <nav className={`navbar ${menuOpen ? 'open sticky' : ''}`}>
+     </div>
+    <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
       <div className="menu-icon" onClick={toggleMenu}>
         <FontAwesomeIcon icon={!menuOpen && faBars} />
       </div>
       
       <div className="logo">
         <Link to="/">
-          <img src="../img/logoPrincipal.jpeg" alt="Logo" />
+          <img src='../img/LogoMain.jpeg' alt="Logo" />
         </Link>
       </div>
 
       <div className="cart-icon">
-        <CartWidget/>
+        
+        <CartWidget className='textDeco'/>
       </div>
 
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
@@ -38,25 +50,26 @@ function Navbar() {
             <FontAwesomeIcon icon={faTimes} />
           </div>
         )}
-        <li><Link to="/">Inicio</Link></li>
+        <li onClick={toggleMenu}><Link className='li' to="/">Inicio</Link></li>
         <li className="categorias-item">
-          <Link to="/">Categorias</Link>
+          <div>
+          <Link className='li' onClick={toggleMenu} to="/">Categorias</Link>
+          </div>
           <ul className="sub-menu">
-          <li><Link to="/BlusasCamisas">Blusas y Camisas</Link></li>
-            <li><Link to="/Sweaters">Sweaters</Link></li>
-            <li><Link to="/SacosCamperas">Sacos y camperas</Link></li>
-            <li><Link to="/Remeras">Remeras</Link></li>
-            <li><Link to="/Pantalones">Pantalones</Link></li>
-            <li><Link to="/Noche">Noche</Link></li>
-            <li><Link to="/Buzos">Buzos</Link></li>
-            <li><Link to="/Outlet">Outlet</Link></li>
+          <li><Link onClick={toggleMenu}  to="/BlusasCamisas">Blusas y Camisas</Link></li>
+            <li><Link onClick={toggleMenu} to="/Sweaters">Sweaters</Link></li>
+            <li><Link onClick={toggleMenu} to="/SacosCamperas">Sacos y camperas</Link></li>
+            <li><Link onClick={toggleMenu} to="/Remeras">Remeras</Link></li>
+            <li><Link onClick={toggleMenu} to="/Pantalones">Pantalones</Link></li>
+            <li><Link onClick={toggleMenu} to="/Noche">Noche</Link></li>
+            <li><Link onClick={toggleMenu} to="/Buzos">Buzos</Link></li>
+            <li><Link onClick={toggleMenu} to="/TallesEspeciales">Talles Especiales</Link></li>
+            <li><Link onClick={toggleMenu} to="/Outlet">Outlet</Link></li>
             
           </ul>
         </li>
-        <li><Link to="/QuienesSomos">Quiénes Somos</Link></li>
-        <div className='Admin'>
-      <Link to="/admin">Panel de Administrador</Link>
-      </div>
+        <li ><Link  className='li' onClick={toggleMenu} to="/QuienesSomos">Quiénes Somos</Link></li>
+    
       </ul>
     </nav>
     </div>

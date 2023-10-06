@@ -48,7 +48,7 @@ const BlusasCamisas = ({ products }) => {
 
      <div className='sectionFiltrar'>
  
-  <input
+  <input className='filtro'
     type="text"
     placeholder="Escribe el nombre del producto..."
     value={filtroNombre}

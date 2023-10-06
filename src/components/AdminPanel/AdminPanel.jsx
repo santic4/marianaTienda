@@ -3,7 +3,7 @@ import './AdminPanel.css';
 import { collection, addDoc, getFirestore, deleteDoc, doc } from 'firebase/firestore';
 import useGetProducts from '../../hooks/useGetProducts';
 import { getAuth, signOut } from 'firebase/auth'; 
-
+import { AiTwotoneDelete } from 'react-icons/ai';
 const AdminPanel = () => {
 
   /*AGREGAR PRODUCTOS*/
@@ -57,6 +57,7 @@ const AdminPanel = () => {
     } else {
       console.log('Por favor, complete todos los campos.');
     }
+    window.location.reload();
   };
 
   const handleSignOut = () => {
@@ -73,12 +74,15 @@ const AdminPanel = () => {
     const db = getFirestore();
     const productRef = doc(db, 'products', productId);
 
+   
     try {
       await deleteDoc(productRef);
       console.log('Producto eliminado exitosamente');
     } catch (error) {
       console.error('Error al eliminar el producto:', error);
     }
+    window.location.reload();
+  
   };
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -99,7 +103,11 @@ const AdminPanel = () => {
     <div className='AdminPanel'>
 
      <section className='contenedor-hijo1'>
+      
+      <h2>Agregar Producto</h2>
+      
       <form onSubmit={handleSubmit}>
+     
         <label>
           Categoría:
           <input
@@ -171,11 +179,15 @@ const AdminPanel = () => {
             onChange={handleInputChange}
           />
         </label>
+        <div className='btnAdd'>
         <button type='submit'>Agregar Producto</button>
+        </div>
       </form>
       </section>
 
       <div className='contenedor-hijo2'>
+
+      <h2>Eliminar Producto</h2>
 
       <input
           type="text"
@@ -183,16 +195,42 @@ const AdminPanel = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-       <ul>
+       <ul className='ulDelete'>
           {filteredProducts.map((product) => (
             <li key={product.id}>
-              {product.title} (ID: {product.id}) - <button onClick={() => deleteProduct(product.id)}>Eliminar</button>
+              {product.title} (ID: {product.id}) - <AiTwotoneDelete className='iconTresh' onClick={() => deleteProduct(product.id)}>Eliminar</AiTwotoneDelete>
             </li>
           ))}
         </ul>
     </div>
     </div>
+    
+    <section className='agregarImg'>
+      <div>
+       <strong>- Para agregar una imagen:</strong>
+        <p>{'1) Entrar a postimages.org'}</p>
+        <p>{'2) Selecciona tamaño 1600x1200 y la imagen'}</p>
+        <p>{'3) Copiar el ENLACE DIRECTO y pegarlo en: URL de la Imagen'}</p>
+      <br></br>
 
+        <strong>{'- Los Precios y Peso de la prenda deben ser solo numeros ( sin $ )'}</strong>
+        </div>
+     
+     <div>
+      <br></br>
+      <br></br>
+     <strong>- Las Categorias deben escribirse estrictamente asi:</strong>
+        <p>{'BlusasCamisas'}</p>
+        <p>{'Sweaters'}</p>
+        <p>{'Remeras'}</p>
+        <p>{'Pantalones'}</p>
+        <p>{'Noche'}</p>
+        <p>{'Buzos'}</p>
+        <p>{'TallesEspeciales'}</p>
+        <p>{'Outlet'}</p>
+     </div>
+      </section>
+      
     </section>
   );
 };

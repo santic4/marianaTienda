@@ -3,7 +3,7 @@ import './QuienesSomos.css';
 
 const QuienesSomos = () => {
   return (
-    <section className="quienes-somos">
+    <section  className="quienes-somos">
       <div className="preguntas-frecuentes">
         <h2>Preguntas Frecuentes</h2>
         <p><strong>¿Cómo realizo el pago por transferencia?</strong></p>
@@ -12,7 +12,6 @@ const QuienesSomos = () => {
         <p><strong>¿En qué momento envían mi pedido?</strong></p>
         <p>Cuando se acredita el pago el envío puede realizarse. En el plazo de 24/48 horas recibirás un mail con el número de seguimiento de tu compra y los pasos para poder realizar el seguimiento.</p>
 
-        {/* Continuar con las demás preguntas frecuentes */}
       </div>
 
       <div className="politica-de-cambio">
@@ -29,13 +28,12 @@ const QuienesSomos = () => {
         <p><strong>Daños de transporte:</strong></p>
         <p>Si el producto se pierde o, al momento de recibirlo, notas que fue dañado durante el transporte, debes informarnos inmediatamente.</p>
         
-        {/* Agregar información adicional sobre la política de cambio */}
       </div>
 
       <div className="como-comprar">
         <h2>Cómo Comprar</h2>
         <ol>
-          <li>Ingresa en nuestro "SHOP", selecciona la categoría de productos y escoge directamente el artículo que desees.</li>
+          <li>Ingresa en nuestros productos, selecciona la categoría y escoge directamente el artículo que desees.</li>
           <li>Visualiza el producto que te interesa. Encontrarás diferentes fotografías en donde podrás ver sus detalles.</li>
           <li>También te informaremos de otros productos relacionados.</li>
           <li>Selecciona un producto, sus variantes si corresponde y agrégalo al carrito de compras. Seguidamente, podrás escoger seguir comprando o realizar el pedido.</li>

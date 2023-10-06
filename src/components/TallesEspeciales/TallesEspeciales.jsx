@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './Remeras.css';
+import './TallesEspeciales.css';
 import { Link } from 'react-router-dom';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import { HiShoppingBag } from 'react-icons/hi';
 import { MdDoubleArrow } from 'react-icons/md';
 
-const Remeras = ({ products }) => {
+const TallesEspeciales = ({ products }) => {
   const [lista, setLista] = useState([]);
   const [filtroNombre, setFiltroNombre] = useState('');
   const [resultadosFiltrados, setResultadosFiltrados] = useState([]);
@@ -14,7 +14,7 @@ const Remeras = ({ products }) => {
   useEffect(() => {
     const getLista = async () => {
       try {
-        const q = query(collection(db, 'products'), where('category', '==', 'Remeras'));
+        const q = query(collection(db, 'products'), where('category', '==', 'TallesEspeciales'));
         const querySnapshot = await getDocs(q);
         const docs = [];
         querySnapshot.forEach((doc) => {
@@ -41,14 +41,14 @@ const Remeras = ({ products }) => {
   };
 
   return (
-    <section>
+    <section className='sectionTalles'>
       <div className='h1Category'>
-      <h1>INICIO <MdDoubleArrow /> REMERAS</h1>
+      <h1>INICIO <MdDoubleArrow /> TALLES ESPECIALES</h1>
       </div>
 
      <div className='sectionFiltrar'>
  
-  <input
+  <input className='filtro'
     type="text"
     placeholder="Escribe el nombre del producto..."
     value={filtroNombre}
@@ -77,4 +77,4 @@ const Remeras = ({ products }) => {
   );
 };
 
-export default Remeras;
+export default TallesEspeciales;

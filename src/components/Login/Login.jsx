@@ -26,9 +26,11 @@ const Login = () => {
     
 
     return(
+        <section className="contenedorPadreLogin">
        <div className="contenedorPadre">
-        
+             <div>
             <h1>Inicia sesion</h1>
+            </div>
          
             <form className="padreForm" onSubmit={handlerSubmit}>
                 <div className="hijo1">
@@ -47,6 +49,7 @@ const Login = () => {
             </form>
 
        </div>
+       </section>
     )
 }
 

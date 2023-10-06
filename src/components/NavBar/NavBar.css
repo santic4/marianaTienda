@@ -3,28 +3,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(0, 0, 0);
   position: relative; /* Agrega posición relativa */
   transition: background-color 0.3s ease; /* Transición de color de fondo */
-  background-color: white; /* Fondo transparente inicial */
-
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: -30px;
 }
-
-.sticky{
-  position: sticky;
-  top: 0;
-  z-index: 1001;
- 
-}
-
 
 /* Estilos para el icono del menú */
 .menu-icon {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 2.6vh;
   color: #5d4243;
   z-index: 1001;
-
+  margin-left: 50px;
 }
 
 /* Estilos para el logo */
@@ -32,21 +23,24 @@
   display: flex;
   justify-content: center; 
   align-items: center; 
-
+margin-top: 30px; 
 }
 
 .logo img {
-  max-height: 110px; /* Ajusta el tamaño del logo según tus necesidades */
+ height: auto;
+width: 400px;
+transform: translatex(-40px);
 }
 
 /* Estilos para el ícono del menú (hamburguesa) */
 .menu-toggle {
+ 
   cursor: pointer;
   color: #6b5253;
   font-size: 25px;
   position: fixed;
   top: 20px;
-  left: 20px;
+
   z-index: 1000; /* Asegura que el ícono esté por encima del menú */
 }
 
@@ -71,24 +65,25 @@
 /* Estilos para mostrar la lista de enlaces cuando se abre el menú */
 .nav-links.show {
   display: block;
-  background-color: #ffa07a;
+  background-color: #ffffff;
   width: 220px;
   height: 100%; /* Resta el espacio del ícono de cierre */
   position: fixed;
   left: 0;
-  padding-top: 0; /* Elimina el espacio superior */
+  padding-top: 0px; /* Elimina el espacio superior */
   padding-left: 20px;
   text-align: start;
   list-style: none;
   text-decoration: none;
   z-index: 1000;
+  font-family: "Century Gothic";
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 
 .close-menu-icon{
   cursor: pointer;
-  font-size: 2vh;
+  font-size: 2.6vh;
   color: #8c7057;
   margin-left: 180px;
   margin-top: 10px;
@@ -111,20 +106,27 @@
 }
 .nav-links.show ul{
   font-size: 2vh;
-padding: 0px 10px;
+padding: 10px 10px;
 list-style: none;
   text-decoration: none;
   -webkit-text-stroke: 2px solid black;
+
+}
+
+.li{
+  border-bottom: 1px solid #8c705797;
+
 }
 
 .nav-links.show a {
-  font-size: 2vh;
+  font-size: 1.6vh;
   text-decoration: none;
-  color: #ffffff;
+  color: #8c7057;
   font-size: auto;
   font-weight: 500;
   list-style: none;
   text-decoration: none;
+  
 }
 
 /* Estilos para el menú desplegable */
@@ -152,6 +154,26 @@ list-style: none;
   text-decoration: none;
 }
 
-.Admin{
- margin-top: 50px;
+@media screen and (max-width: 550px) {
+  .logo img {
+    height: auto;
+   width: 300px;
+   transform: translatex(0px);
+   }
+
+   .menu-icon {
+    margin-left: 5px;
+  }
+
+  .cart-icon{
+    transform: translatex(-5px);
+    font-size: 1.4vh;
+  }
+
+  .iconsCart{
+       font-size: 20px;
+       padding: 7px 7px;
+       border-radius: 11px;
+      
+    }
 }

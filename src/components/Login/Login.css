@@ -1,59 +1,62 @@
-/* Estilos para el contenedor padre */
 .contenedorPadre {
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 200px;
-  }
-  
-  /* Estilos para el título "Inicia sesión" */
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para el formulario */
-  .padreForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Estilos para los elementos de formulario hijo1 y hijo2 */
-  .hijo1,
-  .hijo2 {
-    margin-bottom: 15px;
-  }
-  
-  /* Estilos para las etiquetas del formulario */
-  .labelForm {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* Estilos para los campos de entrada */
-  .inputForm {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  /* Estilos para el botón de inicio de sesión */
-  .btnForm {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btnForm:hover {
-    background-color: #0056b3;
-  }
+  max-width: 400px;
+  margin: 10px auto;
+  margin-top: 150px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f7f7f700;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.padreForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hijo1,
+.hijo2 {
+  margin-bottom: 15px;
+}
+
+.labelForm {
+  font-size: 16px;
+  color: #555;
+}
+
+.inputForm {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btnForm {
+  background-color: #3d6fa5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnForm:hover {
+  background-color: #0056b3;
+}
+
+.contenedorPadreLogin{
+  min-height: 60vh;
+}

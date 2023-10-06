@@ -4,25 +4,18 @@
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    height: 5px;
+    height: 4px;
     transition: background-color 0.3s ease; /* Agrega una transición suave */
     border-radius: 3px;
     overflow: hidden;
-    border-bottom: 1px solid #6b5253;
-  }
-
-  .adsTop-sticky{
-   
-    top: 0;
-    transition: top 0.3s ease; /* Añade una transición suave a la propiedad 'top' */
-    padding: 8px; /* Añade espacio alrededor del elemento para mayor visibilidad */
-    z-index: 100; /* Ajusta el valor según tus necesidades */
+    padding: 8px;
+    border-bottom: 1px solid #6b52535f;
   }
   
   .social-media a {
     color: #5e4c42;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1.4vh;
     margin-right: 20px; /* Ajusta el espaciado entre iconos */
     transition: color 0.3s ease; /* Agrega una transición suave para el color */
   }
@@ -34,23 +27,44 @@
   .physical-locations {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 1.2vh;
     color: #777;
-    
+    font-family: 'Young Serif', serif;
   }
   
   .physical-locations ul {
     display: flex;
     gap: 30px;
     padding-right: 30px;
-    font-size: 12px;
+    font-size: 1.2vh;
     list-style: none; /* Quita las viñetas de la lista */
   }
   
   .physical-locations li {
+    font-size: 1.2vh;
     margin-right: 10px; /* Ajusta el espaciado entre elementos de la lista */
   }
 
+  .titulo-container{
+    color: white;
+   }
+   
+   .titulo-container h1{
+     color: white;
+     font-size: 1.4vh;
+     line-height: auto; 
+     letter-spacing: 2px;
+     margin-bottom: 0rem;
+     font-family: "Century Gothic";
+     font-weight: 300;
+     border-bottom: 1px solid #ad8a76;
+     border-top: 1px solid #ad8a76;
+     background-color: #ad8a76;
+   }
+   
+  .icon-heart{
+    transform: translatey(3px);
+  }
 
   @media screen and (max-width: 1024px) {
     .adsTop {
@@ -64,6 +78,7 @@
 
     .physical-locations {
       font-size: 1vh;
+      font-family: 'Nanum Gothic', sans-serif;
     }
 
     .physical-locations ul {
@@ -77,5 +92,12 @@
     .social-media a {
       font-size: 1vh;
       margin-right: 20px; /* Ajusta el espaciado entre iconos */ 
+    }
+  }
+
+  
+  @media screen and (max-width: 900px) {
+    .adsTop{
+      display: none;
     }
   }

@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 50px;
- 
+  min-height: 80vh;
+
 }
 
 .h1Category {
@@ -123,6 +124,8 @@ border-bottom: 1px solid #ad8a76;
 
 /* Estilos para la etiqueta "Filtro" */
 .sectionFiltrar::before {
+  margin-top: -15px;
+  font-size: 1.6vh;
   content: 'Filtro:';
   margin-right: 10px;
   font-weight: bold;
@@ -135,7 +138,7 @@ border-bottom: 1px solid #ad8a76;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1.6vh;
 }
 
 /* Estilos para el placeholder del campo de entrada de texto */
@@ -147,4 +150,17 @@ border-bottom: 1px solid #ad8a76;
 .sectionFiltrar input[type="text"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    min-height: 80vh;
+   flex-wrap: wrap;
+   gap: 15px;
+  }
+
 }

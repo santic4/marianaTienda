@@ -20,6 +20,13 @@ const InicioImages = () => {
     // Utiliza una expresión regular para reemplazar todos los espacios en blanco con una cadena vacía
     return string.replace(/\s+/g, '');
   }
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
   
   const categoriasSinEspacios = imageCategories.map(category => ({
     ...category,
@@ -28,7 +35,7 @@ const InicioImages = () => {
 
   function renderImageCarousel(images, categoryIndex, route) {
     return (
-      
+  
       <div className='contenedorPadre'>
        
         <Carousel
@@ -49,21 +56,20 @@ const InicioImages = () => {
               <div className='btnTitle'>
                 <h3 className="image-title">{imageCategories[categoryIndex].title}</h3>
                 <Link to={route}>
-                  <button className="image-button">Ver colección</button>
+                  <button onClick={scrollToTop} className="image-button">Ver colección</button>
                 </Link>
               </div>
             </div>
           ))}
         </Carousel>
       </div>
+     
     );
   }
 
   return (
     <div className='containerAbuelo'>
-       <div className='titulo-container'>
-          <h1>¡Bienvenida a Mariana Ropa!</h1>
-        </div>
+     
       <div className='contenedorMain'>
        
         {categoriasSinEspacios.map((category, index) => (
@@ -71,10 +77,6 @@ const InicioImages = () => {
             {renderImageCarousel(category.images, index, `/${category.id}`)}
           </div>
         ))}
-      </div>
-
-      <div className='h2Contenedor'>
-        <h2 className='h2'>30% OFF CONTADO EFECTIVO</h2>
       </div>
     </div>
   );

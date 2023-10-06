@@ -3,7 +3,7 @@ import ItemCount from './ItemCount';
 import './ItemDetail.css'
 import { Link, useNavigate } from 'react-router-dom';
 import { CartContext } from '../../context/cartContext';
-import { BsArrowBarRight, BsArrowBarLeft } from 'react-icons/bs';
+import { BsArrowBarLeft } from 'react-icons/bs';
 
 const ItemDetail = ({ producto }) => {
   const { addItem } = useContext(CartContext);
@@ -33,6 +33,13 @@ const ItemDetail = ({ producto }) => {
     addItem(item, quantity);
   };
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <section className='sectionDetail'>
       <div className='tituloCarrito'>
@@ -56,8 +63,8 @@ const ItemDetail = ({ producto }) => {
         <div className='contador'>
         {quantityAdded > 0 ? (
           <section className='btns'>
-          <Link to='/' className='finish btnSeguir'>Seguir Comprando</Link>
-          <Link to='/cart' className='finish'>Ir al carrito</Link>
+          <Link onClick={scrollToTop} to='/' className='finish btnSeguir'>Seguir Comprando</Link>
+          <Link onClick={scrollToTop} to='/cart' className='finish'>Ir al carrito</Link>
           </section>
         ) : (
           <ItemCount initial={1} stock={producto.stock} onAdd={handleOnAdd} />

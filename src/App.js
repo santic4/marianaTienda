@@ -26,11 +26,14 @@ import { CartProvider } from './context/cartContext';
 import ItemDetailContainer  from './components/ItemDetailContainer/ItemDetailContainer';
 import Footer from './components/Footer/Footer';
 import QuienesSomos from './components/QuienesSomos/QuienesSomos';
+import TallesEspeciales from './components/TallesEspeciales/TallesEspeciales';
+import { SiWhatsapp } from 'react-icons/si';
 
 //FONTS
 const auth = getAuth(appFirebase)
 
 function App() {
+  document.title = 'Mariana Ropa || Tienda Online';
 
   //Productos
   const [products, setProducts] = useState([]); 
@@ -81,19 +84,27 @@ function App() {
           <Route path="/SacosCamperas" element={<SacosCamperas products={products} />} />
           <Route path="/Noche" element={<Noche products={products} />} />
           <Route path="/Buzos" element={<Buzos products={products} />} />
+          <Route path="/TallesEspeciales" element={<TallesEspeciales products={products}/>} />
           <Route path="/Outlet" element={<Outlet products={products} />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/TallesEspeciales" element={<TallesEspeciales />} />
           <Route path="/QuienesSomos" element={<QuienesSomos />}/>
           <Route
            path="/admin"
            element={usuario ? <AdminPanel correoUsuario={usuario.email} /> : <Login />}
            />
+          
          </Routes>
 
+         <div className="whatsapp-float">
+            <a href="https://api.whatsapp.com/send?phone=5493364182955">
+              <SiWhatsapp className='iconWsp' />
+            </a>
+          </div>
          <Footer />
-
+       
         </CartProvider>
       </BrowserRouter>
     </div>

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './Pantalones.css';
-
+import { Link } from 'react-router-dom';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import { HiShoppingBag } from 'react-icons/hi';
+import { MdDoubleArrow } from 'react-icons/md';
 
-const Pantalones = () => {
+const Pantalones = ({ products }) => {
   const [lista, setLista] = useState([]);
+  const [filtroNombre, setFiltroNombre] = useState('');
+  const [resultadosFiltrados, setResultadosFiltrados] = useState([]);
   const db = getFirestore();
 
   useEffect(() => {
@@ -25,20 +29,51 @@ const Pantalones = () => {
     getLista();
   }, []);
 
+  const handleFiltroNombreChange = (event) => {
+    const nuevoFiltro = event.target.value;
+    setFiltroNombre(nuevoFiltro);
+
+    // Aplica el filtrado sobre la lista original
+    const resultados = lista.filter((item) =>
+      item.title.toLowerCase().includes(nuevoFiltro.toLowerCase())
+    );
+    setResultadosFiltrados(resultados);
+  };
+
   return (
+    <section>
+      <div className='h1Category'>
+      <h1>INICIO <MdDoubleArrow /> PANTALONES </h1>
+      </div>
+
+     <div className='sectionFiltrar'>
+ 
+  <input
+    type="text"
+    placeholder="Escribe el nombre del producto..."
+    value={filtroNombre}
+    onChange={handleFiltroNombreChange}
+  />
+</div>
+   
     <div className='container'>
-      {lista.map((list) => (
+    {(resultadosFiltrados.length > 0 ? resultadosFiltrados : lista).map((list) => (
         <div className='card' key={list.id}>
           <div className='card-body'>
-            <p className='card-title'>Nombre: {list.title}</p>
-            <p className='card-category'>Categoría: {list.category}</p>
-            <p className='card-description'>Descripción: {list.description}</p>
+          <Link to={`/item/${list.id}`}>
             <img className='card-img' src={list.imageUrl} alt={list.title} />
-            <p className='card-price'>Precio: {list.price}</p>
+            <HiShoppingBag className='iconsCartDetail' />
+          </Link>
+          <div className='descriptionCard'>
+            <h3 className='card-title'>{list.title}</h3>
+            <h3 className='card-price'>${list.price}</h3>
+            </div>
+           
           </div>
         </div>
       ))}
     </div>
+    </section>
   );
 };
 

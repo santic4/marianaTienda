@@ -84,12 +84,12 @@ function Checkout() {
 
   function ticket(id) {
     return (
-     
+      <section className="padreSection">
       <div className="comprobante-card">
         {buyerInfo && (
           <div className="comprobante-info">
             <h4 className="comprobante-title">Comprobante</h4>
-            <p><strong>NOMBRE</strong></p>
+            <p><strong>NOMBRE y APELLIDO</strong></p>
             <p>{buyerInfo.name}</p>
             <p><strong>CORREO ELECTRÓNICO</strong></p>
             <p>{buyerInfo.email}</p>
@@ -99,11 +99,24 @@ function Checkout() {
             <p>{orderDate && (formatDate(orderDate) + " (Arg)") }</p>
             <p><strong>ID ORDEN</strong></p>
             <p>{id}</p>
-
+            <p><strong>Monto total a depositar</strong></p>
+            <p className="totalIVA">{totalIva}</p>
           </div>
           
         )}
+      </div >
+
+      <div className="comprobante-card">
+        <h3>Transferencia directa</h3>
+        <h4>BBVA</h4>
+        <p>CUIT: 30710849133</p>
+        <p>RAZON SOCIAL: GEMAL SAN NICOLAS SR</p>
+        <p>ALIAS: PERNO.TEATRO.CATRE</p>
+        <p>CBU: 0170079420000032831980</p>
+        <p>CUENTA: CC$ 079-32831918</p>
+        <h3>Recorda poner como referencia/motivo tu nombre y apellido</h3>
       </div>
+      </section>
       
     );
   }
@@ -136,7 +149,7 @@ function Checkout() {
           <div className="container">
             <h1>Datos de envío</h1>
             <form id="checkout-form" ref={form} onSubmit={sendEmail}>
-            <label htmlFor="name">Nombre:</label>
+            <label htmlFor="name">Nombre y apellido:</label>
               <input id="nameInput" type="text" name="user_name" required />
 
               <label htmlFor="email">Correo Electrónico:</label>
@@ -148,22 +161,21 @@ function Checkout() {
               <input type="hidden" name="cart_items" value={cartItemsText} />
               <input type="hidden" name="total" value={total} />
 
-              <label htmlFor="country">País:</label>
-              <input id="countryInput" type="text" name="user_country" required />
-
               <label htmlFor="apartment">Nº Departamento / Habitación:</label>
               <input id="apartmentInput" type="text" name="user_apartment" />
 
               <label htmlFor="province">Provincia:</label>
               <input id="provinceInput" type="text" name="user_province" required />
 
+              <label htmlFor="country">Localidad:</label>
+              <input id="countryInput" type="text" name="user_country" required />
+
               <label htmlFor="postalCode">Código Postal:</label>
               <input id="postalCodeInput" type="text" name="user_postal_code" required />
 
               <label htmlFor="phone">Teléfono:</label>
-              <input id="phoneInput" type="tel" name="user_phone" required />
+              <input id="phoneInput" type="text" name="user_phone" required />
 
-              
               <label htmlFor="message">Mensaje adicional: </label>
               <textarea id="message" name="message" rows="4" required></textarea>
 
@@ -175,7 +187,7 @@ function Checkout() {
 
     </section>
    
-    <p>Una vez completado los datos de envio se le mostrara</p>
+    <p className="pMetodo">*Metodo de pago: Una vez completado el formulario se le mostrara los datos de transferencia directa</p>
     </div>
   );
 }
